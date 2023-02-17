@@ -29,12 +29,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         if (input.equals("w")) {
+            System.out.println("StepAhead:");
             b.stepAhead(myArray,input);
         }else if (input.equals("a")) {
+            System.out.println("TurnLeft:");
             b.turnLeft(myArray,input);
         }else if (input.equals("d")) {
+            System.out.println("TurnRight:");
             b.turnRight(myArray,input);
         }else if (input.equals("s")) {
+            System.out.println("StepBack:");
             b.stepBack(myArray,input);
         }else{
             System.out.println("Что-то пошло не так");
