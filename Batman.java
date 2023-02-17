@@ -1,7 +1,5 @@
 package moving;
 
-import java.util.Scanner;
-
 class Batman implements Movable {
     public void stepAhead(String[][] myArray, String input) {
         String[][] newArray = new String[myArray.length][];
@@ -41,7 +39,7 @@ class Batman implements Movable {
                     if ("b".equals(newArray[i][j])) {
                         if (i == 0) {
                             newArray[i][j] = "_";
-                            newArray[newArray.length][j - 1] = "b";
+                            newArray[newArray.length - 1][j - 1] = "b";
                         } else {
                             newArray[i][j] = "_";
                             newArray[i][j - 1] = "b";
@@ -69,10 +67,10 @@ class Batman implements Movable {
                     if ("b".equals(newArray[i][j])) {
                         if (i == 0) {
                             newArray[i][j] = "_";
-                            newArray[newArray.length][j + 1] = "b";
+                            newArray[newArray.length - 1][++j] = "b";
                         } else {
                             newArray[i][j] = "_";
-                            newArray[i][j + 1] = "b";
+                            newArray[i][++j] = "b";
                         }
                     }
                 }
@@ -96,10 +94,10 @@ class Batman implements Movable {
                     if ("b".equals(newArray[i][j])) {
                         if (i == 4) {
                             newArray[i][j] = "_";
-                            newArray[i][j] = "b";
+                            newArray[newArray.length - 1][j] = "b";
                         }else{
                             newArray[i][j] = "_";
-                            newArray[i + 1][j] = "b";
+                            newArray[++i][j] = "b";
                         }
                     }
                 }
