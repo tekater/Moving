@@ -92,9 +92,9 @@ class Batman implements Movable {
             for (int i = 0; i < myArray.length; i++) {
                 for (int j = 0; j < myArray.length; j++) {
                     if ("b".equals(newArray[i][j])) {
-                        if (i == 4) {
+                        if (i == newArray.length - 1) { // если b находится на последней клетке столбца
                             newArray[i][j] = "_";
-                            newArray[newArray.length - 1][j] = "b";
+                            newArray[0][j] = "b"; // то b переносится на начало столбца, т.е. наше поле приобретает размерность тора - можно двигаться бесконечно по кругу
                         }else{
                             newArray[i][j] = "_";
                             newArray[++i][j] = "b";
